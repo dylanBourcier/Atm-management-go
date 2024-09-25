@@ -1,0 +1,42 @@
+[
+	{
+		"Id": 1,
+		"OwnerId": 1,
+		"AccountNumber": 123456,
+		"CreationDate": "2020-01-01",
+		"Country": "US",
+		"PhoneNumber": "123-456-7890",
+		"Amount": 1000,
+		"AccountType": "Checking"
+	},
+	{
+		"Id": 2,
+		"OwnerId": 2,
+		"AccountNumber": 654321,
+		"CreationDate": "2020-01-01",
+		"Country": "US",
+		"PhoneNumber": "123-456-7890",
+		"Amount": 2000,
+		"AccountType": "Savings"
+	},
+	{
+		"Id": 3,
+		"OwnerId": 0,
+		"AccountNumber": 12,
+		"CreationDate": "2024-09-25",
+		"Country": "FR",
+		"PhoneNumber": "01",
+		"Amount": 100,
+		"AccountType": "Savings"
+	},
+	{
+		"Id": 4,
+		"OwnerId": 0,
+		"AccountNumber": 19,
+		"CreationDate": "2024-09-25",
+		"Country": "fr",
+		"PhoneNumber": "09",
+		"Amount": 10,
+		"AccountType": "Savings"
+	}
+]
