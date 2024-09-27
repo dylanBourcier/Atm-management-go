@@ -2,21 +2,16 @@
 	{
 		"Id": 1,
 		"Name": "Alice",
-		"Password": "aze"
+		"Password": "$2a$10$/tuumZdDaJfTnzfcxKSaa.o3YYmnfttJcoaK5bBKGw7UPf0nf6cdi"
 	},
 	{
 		"Id": 2,
 		"Name": "Michel",
-		"Password": "aze"
+		"Password": "$2a$10$XCc4K2TaC4gC5u9xx0WeBuc5bdg835iDsMH/RSL4CbaMlkMunuh1a"
 	},
 	{
-		"Id": 4,
-		"Name": "alice2",
-		"Password": "aze"
-	},
-	{
-		"Id": 5,
-		"Name": "Aliiiice",
-		"Password": "aze"
+		"Id": 3,
+		"Name": "Alice2",
+		"Password": "$2a$10$US.Uu96/GG550dsSW3Ab3e/Od2S1WZxvMqGrpbiIYQU1tQhNvWNIi"
 	}
 ]

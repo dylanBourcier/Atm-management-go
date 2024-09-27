@@ -3,6 +3,10 @@ package main
 import (
 	"errors"
 	"fmt"
+	"syscall"
+
+	"golang.org/x/crypto/bcrypt"
+	"golang.org/x/term"
 )
 
 func LoginMenu() {
@@ -48,7 +52,12 @@ func Login() {
 		fmt.Print("Username: ")
 		fmt.Scanln(&username)
 		fmt.Print("Password: ")
-		fmt.Scanln(&password)
+		bytePassword, err := term.ReadPassword(int(syscall.Stdin))
+		if err != nil {
+			fmt.Println("\nError reading password")
+			continue
+		}
+		password = string(bytePassword)
 		user, err := CheckLogin(username, password)
 		if err != nil {
 			isInvalidCredentials = true
@@ -60,7 +69,7 @@ func Login() {
 }
 func CheckLogin(username, pwd string) (User, error) {
 	for _, user := range Users {
-		if user.Name == username && user.Password == pwd {
+		if user.Name == username && verifyPassword(user.Password, pwd) {
 			return user, nil
 		}
 	}
@@ -80,8 +89,18 @@ func Register() {
 		fmt.Print("Username: ")
 		fmt.Scanln(&username)
 		fmt.Print("Password: ")
-		fmt.Scanln(&password)
-		user := User{Id: len(Users) + 1, Name: username, Password: password}
+		bytePassword, err := term.ReadPassword(int(syscall.Stdin))
+		if err != nil {
+			fmt.Println("\nError reading password")
+			continue
+		}
+		password = string(bytePassword)
+		hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+		if err != nil {
+			fmt.Println("Error hashing password:", err)
+			continue
+		}
+		user := User{Id: len(Users) + 1, Name: username, Password: string(hashedPassword)}
 		for _, u := range Users {
 			if u.Name == username {
 				isDupe = true

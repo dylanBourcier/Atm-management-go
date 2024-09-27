@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"golang.org/x/crypto/bcrypt"
+)
 
 func ClearScreen() {
 	fmt.Print("\033[H\033[2J")
@@ -40,4 +44,9 @@ func (r *Record) Deposit(amount float64) {
 }
 func (r *Record) Withdraw(amount float64) {
 	r.Amount -= amount
+}
+
+func verifyPassword(hashedPassword, plainPassword string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(plainPassword))
+	return err == nil
 }
