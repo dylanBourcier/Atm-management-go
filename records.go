@@ -14,6 +14,7 @@ func CreateAccount(u *User) {
 
 	var record Record
 	record.Owner = *u
+	record.OwnerId = u.Id
 
 	// Get the account number
 	for {
@@ -171,7 +172,16 @@ func MakeTransaction(u *User) {
 	title := "ATM Management - Make transactions"
 	ClearScreenAndTitle(title)
 	fmt.Printf("\t\t\t\n\n")
-	record := GetAccountByAccountNumber(u, title)
+	record := Record{}
+	for {
+		record = GetAccountByAccountNumber(u, title)
+		if record.AccountType == "Fixed01" || record.AccountType == "Fixed02" || record.AccountType == "Fixed03" {
+			ClearScreenAndTitle(title)
+			fmt.Println("Transactions are not allowed for Fixed accounts. Please choose a different account.")
+			continue
+		}
+		break
+	}
 	ClearScreenAndTitle(title)
 	for {
 		fmt.Println("What would you like to do?")

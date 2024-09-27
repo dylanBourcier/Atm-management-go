@@ -7,7 +7,7 @@
 		"Country": "US",
 		"PhoneNumber": "123-456-7890",
 		"Amount": 1000,
-		"AccountType": "Checking"
+		"AccountType": "Current"
 	},
 	{
 		"Id": 2,
@@ -38,5 +38,35 @@
 		"PhoneNumber": "09",
 		"Amount": 1010,
 		"AccountType": "Savings"
+	},
+	{
+		"Id": 5,
+		"OwnerId": 1,
+		"AccountNumber": 10,
+		"CreationDate": "2024-09-27",
+		"Country": "fr",
+		"PhoneNumber": "09",
+		"Amount": 100,
+		"AccountType": "Fixed01"
+	},
+	{
+		"Id": 6,
+		"OwnerId": 1,
+		"AccountNumber": 11,
+		"CreationDate": "2024-09-27",
+		"Country": "fr",
+		"PhoneNumber": "01",
+		"Amount": 1001.2,
+		"AccountType": "Fixed02"
+	},
+	{
+		"Id": 7,
+		"OwnerId": 1,
+		"AccountNumber": 13,
+		"CreationDate": "2024-09-27",
+		"Country": "fr",
+		"PhoneNumber": "012",
+		"Amount": 1001.2,
+		"AccountType": "Fixed03"
 	}
 ]
