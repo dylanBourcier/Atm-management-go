@@ -22,22 +22,21 @@ func MainMenu(u *User) {
 		case 1:
 			CreateAccount(u)
 		case 2:
-			// UpdateAccount(u)
+			UpdateAccount(u)
 		case 3:
-			// CheckAccountDetails(u)
+			CheckAccountDetails(u)
 		case 4:
-			// ViewAccountsList(u)
+			ViewAccountsList(u)
 		case 5:
-			// MakeTransaction(u)
+			MakeTransaction(u)
 		case 6:
-			// DeleteAccount(u)
+			DeleteAccount(u)
 		case 7:
-			// TransferOwnership(u)
+			TransferOwnership(u)
 		case 8:
 			os.Exit(0)
 		default:
 			fmt.Println("Invalid option")
-			Pause()
 		}
 	}
 }

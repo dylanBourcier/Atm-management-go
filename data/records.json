@@ -16,27 +16,27 @@
 		"CreationDate": "2020-01-01",
 		"Country": "US",
 		"PhoneNumber": "123-456-7890",
-		"Amount": 2000,
+		"Amount": 1988,
 		"AccountType": "Savings"
 	},
 	{
 		"Id": 3,
-		"OwnerId": 0,
+		"OwnerId": 1,
 		"AccountNumber": 12,
 		"CreationDate": "2024-09-25",
-		"Country": "FR",
-		"PhoneNumber": "01",
-		"Amount": 100,
+		"Country": "Angleterre",
+		"PhoneNumber": "01923",
+		"Amount": 997000,
 		"AccountType": "Savings"
 	},
 	{
 		"Id": 4,
-		"OwnerId": 0,
+		"OwnerId": 1,
 		"AccountNumber": 19,
 		"CreationDate": "2024-09-25",
-		"Country": "fr",
+		"Country": "Angleterre",
 		"PhoneNumber": "09",
-		"Amount": 10,
+		"Amount": 1010,
 		"AccountType": "Savings"
 	}
 ]

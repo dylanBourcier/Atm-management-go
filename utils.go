@@ -29,3 +29,15 @@ func PrintRecord(record Record) {
 	fmt.Println("Amount: ", record.Amount)
 	fmt.Println("Account Type: ", record.AccountType)
 }
+
+func (r Record) PrintDetails() {
+	fmt.Printf("Account Number: %d	Amount: $%.2f\n", r.AccountNumber, r.Amount)
+	fmt.Printf("Country: %s		Account Type: %s\n", r.Country, r.AccountType)
+	fmt.Printf("Phone Number: %s	Creation Date : %s\n", r.PhoneNumber, r.CreationDate)
+}
+func (r *Record) Deposit(amount float64) {
+	r.Amount += amount
+}
+func (r *Record) Withdraw(amount float64) {
+	r.Amount -= amount
+}
